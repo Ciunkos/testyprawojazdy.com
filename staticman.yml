@@ -16,7 +16,7 @@ proposals:
   branch: "master"
 
   # Text to use as the commit message or pull request title. Accepts placeholders.
-  commitMessage: "Changed question's #{fields.id} solution"
+  commitMessage: "Question \"{fields.text}\" proposal"
 
   # (*) REQUIRED
   #
@@ -42,4 +42,4 @@ proposals:
 
   # Names of required files. If any of these isn't in the request or is empty,
   # an error will be thrown.
-  requiredFields: []
+  requiredFields: ["text"]
