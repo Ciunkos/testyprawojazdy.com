@@ -2,12 +2,12 @@
 # different config blocks for different sections of your site.
 # For example, you can have one property to handle comment submission and
 # another one to handle posts.
-solutions:
+proposals:
   # (*) REQUIRED
   #
   # Names of the fields the form is allowed to submit. If a field that is
   # not here is part of the request, an error will be thrown.
-  allowedFields: ["markdown", "id"]
+  allowedFields: ["id", "text", "correct", "value", "answers", "categories", "media", "solution"]
   allowedOrigins: ["localhost", "testyprawojazdy.com"]
   # (*) REQUIRED
   #
@@ -21,7 +21,7 @@ solutions:
   # (*) REQUIRED
   #
   # Destination path (filename) for the data files. Accepts placeholders.
-  filename: "{fields.id}"
+  filename: "{@id}"
 
   # The format of the generated data files. Accepted values are "json", "yaml"
   # or "frontmatter"
@@ -30,7 +30,7 @@ solutions:
   # Whether entries need to be appproved before they are published to the main
   # branch. If set to `true`, a pull request will be created for your approval.
   # Otherwise, entries will be published to the main branch automatically.
-  moderation: true
+  moderation: false
 
   # Name of the site. Used in notification emails.
   name: "testyprawojazdy.com"
@@ -38,8 +38,8 @@ solutions:
   # (*) REQUIRED
   #
   # Destination path (directory) for the data files. Accepts placeholders.
-  path: "src/data/solutions"
+  path: "src/data/proposals"
 
   # Names of required files. If any of these isn't in the request or is empty,
   # an error will be thrown.
-  requiredFields: ["markdown", "id"]
+  requiredFields: []
